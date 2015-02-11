@@ -1,4 +1,4 @@
-﻿/*
+/*
    ═ f4.PlayerNetStream ════════════════════════════════════════════════════
    Software: f4.PlayerNetStream - flash video player custom netstream class
    Version: 1.3.5
@@ -14,14 +14,15 @@
  ═══════════════════════════════════════════════════════════════════════════ */
 package f4
 {
-	import flash.net.NetConnection;
-	import flash.net.NetStream;
-	
-	public dynamic class PlayerNetStream extends NetStream
-	{
-		public function PlayerNetStream(nc:NetConnection)
-		{
-			super(nc);
-		}
-	}
+
+    import flash.net.NetConnection;
+    import flash.net.NetStream;
+
+    dynamic public class PlayerNetStream extends NetStream
+    {
+        public function PlayerNetStream( connection : NetConnection, peerID : String = "connectToFMS" )
+        {
+            super( connection, peerID );
+        }
+    }
 }
