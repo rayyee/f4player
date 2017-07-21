@@ -17,13 +17,13 @@ package f4
 
     import flash.display.MovieClip;
     import flash.display.Stage;
-    import flash.media.Video;
+    import flash.display.DisplayObject;
 
     public interface PlayerInterface
     {
         function Callback( callback : Function ) : void;
 
-        function Movie( w : int, h : int ) : Video;
+        function Movie( w : int, h : int ) : DisplayObject;
 
         function Play( file : String ) : Boolean;
 

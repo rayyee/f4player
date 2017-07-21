@@ -17,6 +17,7 @@ package f4
 
     import flash.display.Bitmap;
     import flash.display.BitmapData;
+    import flash.display.DisplayObject;
     import flash.display.Loader;
     import flash.display.MovieClip;
     import flash.display.Stage;
@@ -202,14 +203,14 @@ package f4
 //            };
         }
 
-        public function Movie( w : int, h : int ) : Video
+        public function Movie( w : int, h : int ) : DisplayObject
         {
             this.Log( 'Video dimensions: ' + w.toString() + 'x' + h.toString() );
             v = new Video( w, h );
             v.smoothing = true;
             this.Log( 'NetConnection is: ' + nc.connected );
             v.attachNetStream( ns );
-            return v;
+            return v as DisplayObject;
         }
 
         public function Play( file : String ) : Boolean
